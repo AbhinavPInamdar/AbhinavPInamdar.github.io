@@ -252,3 +252,43 @@ ul li .descr::before {
 }
 
 
+/* Add this to your existing CSS file */
+
+.hidden {
+    display: none;
+}
+
+.reveal-btn {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reveal-btn:hover {
+    background: #e55b50;
+}
+
+#secret-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#secret-button button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#secret-button button:hover {
+    background: #e55b50;
+}
