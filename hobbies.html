@@ -3,10 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Photography Portfolio</title>
     <link rel="stylesheet" href="css/style2.css">
+    <!-- Include GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-    <p>fdgfdsf</p>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">AI</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="hobbies.html" class="active">Hobbies</a></li>
+        </ul>
+    </div>
+
+    <!-- Photography Gallery -->
+    <div class="photo-gallery">
+        <h1>Photography Gallery</h1>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_DSC2992_00001.jpg" alt="Photography Example 1" loading="lazy">
+        </div>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854072_00001.jpg" alt="Photography Example 3" loading="lazy">
+        </div>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854077_00001.jpg" alt="Photography Example 4" loading="lazy">
+        </div>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854274_00001.jpg" alt="Photography Example 4" loading="lazy">
+        </div>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854379_00001.jpg" alt="Photography Example 4" loading="lazy">
+        </div>
+        <div class="photo-item">
+            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854402_00001.jpg" alt="Photography Example 4" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abhinavpinamdar" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Abhinav Inamdar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP Animation Script -->
+    <script>
+        window.onload = function() {
+            // Fade-in and scale-up animation for photo items
+            gsap.from(".photo-item", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 1,
+                stagger: 0.2
+            });
+
+            // Scale-up on hover effect for photo items
+            const photoItems = document.querySelectorAll(".photo-item");
+            photoItems.forEach(item => {
+                item.addEventListener("mouseenter", () => {
+                    gsap.to(item, {
+                        scale: 1.05,
+                        duration: 0.3
+                    });
+                });
+
+                item.addEventListener("mouseleave", () => {
+                    gsap.to(item, {
+                        scale: 1,
+                        duration: 0.3
+                    });
+                });
+            });
+        }
+    </script>
 </body>
 </html>
