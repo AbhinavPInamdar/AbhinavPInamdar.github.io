@@ -9,6 +9,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script>
+        // Page transition effect using GSAP
+        function pageTransition(newPageUrl) {
+            gsap.to("body", {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: function() {
+                    window.location.href = newPageUrl;
+                }
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+    gsap.from("body", {
+        opacity: 0,
+        duration: 0.5,  // Duration of the fade-in effect
+        delay: 0.2      // A slight delay before the fade-in starts (optional)
+    });
+});
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // GSAP animations for hero section elements
+            gsap.from(".hero p", {
+                opacity: 0,
+                y: -50,
+                duration: 1,
+                stagger: 0.3
+            });
+
+            gsap.from(".icons a", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 1,
+                delay: 1
+            });
+
+            gsap.from("#remove-hero-btn", {
+                opacity: 0,
+                y: 50,
+                duration: 1.5,
+                delay: 1.5
+            });
+
+            const removeHeroBtn = document.getElementById("remove-hero-btn");
+            const heroDiv = document.querySelector(".hero");
+            const particlesDiv = document.getElementById("particles-js");
+
+            // When the button is clicked, hide the hero section and bring particles to the front
+            removeHeroBtn.addEventListener("click", function() {
+                if (heroDiv) {
+                    heroDiv.style.display = "none"; // Hide the hero div
+                }
+
+                if (particlesDiv) {
+                    particlesDiv.style.zIndex = "10";  // Bring particles to the front
+                }
+
+                // After 30 seconds, bring the hero section back
+                setTimeout(function() {
+                    if (heroDiv) {
+                        heroDiv.style.display = "block"; // Show the hero div
+                    }
+                    if (particlesDiv) {
+                        particlesDiv.style.zIndex = "1"; // Reset the z-index of particles
+                    }
+                }, 3000); // 30 seconds timer
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -16,66 +87,59 @@
             <a href="#home" style="text-decoration: none; color: white;">AI</a>
         </div>
         <ul class="nav-links">
-            <li><a href="#index.html">Home</a></li>
-            <li><a href="#about">CV</a></li>
-            <li><a href="#services">Skills</a></li>
-            <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
+            <li><a href="index.html" onclick="event.preventDefault(); pageTransition('index.html');">Home</a></li>
+            <li><a href="cv.html" onclick="event.preventDefault(); pageTransition('cv.html');">CV</a></li>
+            <li><a href="#services" onclick="event.preventDefault(); pageTransition('#services');">Skills</a></li>
+            <li><a href="hobbies.html" onclick="event.preventDefault(); pageTransition('hobbies.html');">Hobbies</a></li>
         </ul>
     </div>
-    <div id="particles-js"></div>
-    <script src="script/app.js"></script>
-    <div class="hero">
-        <p>Abhinav P Inamdar</p>
-        <p>Student, Developer, Photographer</p>
-        <div class="icons">
-            <a href="https://github.com/AbhinavPInamdar" target="_blank">
-                <!-- GitHub Icon -->
-            </a>
-            <a href="https://www.linkedin.com/in/abhinavpinamdar" target="_blank">
-                <!-- LinkedIn Icon -->
-            </a>
-        </div>  
+
+    <!-- Section containing particles.js and hero -->
+    <div id="particle-section">
+        <div id="particles-js"></div> <!-- Particles Container -->
+
+        <div class="hero">
+            <p>Abhinav P Inamdar</p>
+            <p>Student, Developer, Photographer</p>
+            <div class="icons">
+                <a href="https://github.com/AbhinavPInamdar" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abhinavpinamdar" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <!-- Button to remove hero section -->
+            <button id="remove-hero-btn">Enable Particles</button>
+        </div>
     </div>
 
-    <!-- Secret Button Section -->
-        <div class="info">
+    <script src="script/app.js"></script>
+
+    <div class="info">
         <h1 style="text-align: center;">Projects</h1>
         <div class="projects">
             <ul>
                 <li style="--accent-color:#41516C">
                     <div class="date">2022 - Present</div>
                     <div class="title">Chess Engine</div>
-                    <div class="descr">Algorithm Development: Implemented advanced chess algorithms such as Minimax with Alpha-Beta Pruning to optimize the engine’s decision-making process. </div>
+                    <div class="descr">Algorithm Development: Implemented advanced chess algorithms such as Minimax with Alpha-Beta Pruning to optimize the engine’s decision-making process.</div>
                 </li>
                 <li style="--accent-color:#41516C">
                     <div class="date">2023-2024</div>
-                    <div class="title">Taxatomy: Tax Filling Website</div>
+                    <div class="title">Taxatomy: Tax Filing Website</div>
                     <div class="descr">
-                        Built a scalable back-end with Node.js and Express.js for tax data processing, and an intuitive React.js front-end. Managed secure data storage with MongoDB, using encryption and access controls.</div>
+                        Built a scalable back-end with Node.js and Express.js for tax data processing, and an intuitive React.js front-end. Managed secure data storage with MongoDB, using encryption and access controls.
+                    </div>
                 </li>
                 <li style="--accent-color:#41516C">
-                    <div class="date">2022</div>
-                    <div class="title">Project Title 3</div>
-                    <div class="descr">Description of project 3</div>
-                </li>
-                <li style="--accent-color:#41516C">
-                    <div class="date">2022</div>
-                    <div class="title">Project Title 4</div>
-                    <div class="descr">Description of project 4</div>
-                </li>
-                <li style="--accent-color:#41516C">
-                    <div class="date">2022</div>
-                    <div class="title">Project Title 5</div>
-                    <div class="descr">Description of project 5</div>
+                    <div class="date">2024</div>
+                    <div class="title">Fake Review Detection System</div>
+                    <div class="descr">Developed a BI-LSTM-based deep learning model for fake review detection with <b>97% accuracy</b>.
+                        Deployed the system using Flask, Docker, and AWS ECS for high scalability and availability.</div>
                 </li>
             </ul>
         </div> 
     </div>
-
-    <script>
-        function showSecretButton() {
-            document.getElementById('secret-button').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>

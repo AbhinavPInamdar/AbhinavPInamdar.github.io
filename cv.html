@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav Inamdar - CV</title>
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">AI</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" onclick="pageTransition('index.html'); return false;">Home</a></li>
+            <li><a href="cv.html" class="active" onclick="pageTransition('cv.html'); return false;">CV</a></li>
+            <li><a href="#skills" onclick="pageTransition('#skills'); return false;">Skills</a></li>
+            <li><a href="hobbies.html" onclick="pageTransition('hobbies.html'); return false;">Hobbies</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="cv-content">
+        <header class="cv-header">
+            <h1>Abhinav P Inamdar</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Bengaluru, KA</p>
+                <p><i class="fas fa-envelope"></i> abhinavsnet@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 8217615781</p>
+                <p><i class="fab fa-linkedin"></i> linkedin.com/in/abhinavpinamdar</p>
+                <p><i class="fas fa-globe"></i> https://abhinavpinamdar.github.io/</p>
+            </div>
+            <p class="objective">Software Engineering student • Seeking Software Engineering Internships for Summer 2025</p>
+        </header>
+
+        <section class="cv-section" id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="section-content">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>BMS College of Engineering, Bengaluru, KA</p>
+                <p>Relevant courses: Data Structures and Algorithms, OS</p>
+                <p>GPA: 8.2</p>
+            </div>
+        </section>
+
+        <section class="cv-section" id="skills">
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>Java, Python, JavaScript, C/C++, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <p>Flask, Vue.js, React.js</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud/Tools</h3>
+                    <p>Git, GitHub, Docker, Kubernetes, AWS (ECS, S3, RDS, Lambda, CloudWatch)</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <p>NumPy, Pandas, TensorFlow</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases/Others</h3>
+                    <p>MongoDB, MySQL</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section" id="certifications">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Python for Data Science (IBM)</li>
+                    <li>Machine Learning with Python (IBM)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section" id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Chess Engine</h3>
+                    <p class="tech-stack">Python, OpenCV, C, Microcontrollers</p>
+                    <ul>
+                        <li>Algorithm Development: Implemented advanced chess algorithms such as Minimax with Alpha-Beta Pruning to optimize the engine's decision-making process.</li>
+                        <li>Lead Developer: Spearheaded the design and implementation of the chess engine, ensuring its ability to make intelligent decisions based on standard chess algorithms and strategies.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Blood Donation App</h3>
+                    <p class="tech-stack">Dart, Firebase, Node.js</p>
+                    <ul>
+                        <li>Mobile App Development: Led the design and development of the blood donation app using flutter, ensuring cross-platform compatibility for both iOS and Android.</li>
+                        <li>Server-Side Development: Built the back-end using Node.js and Express.js, handling API development, user authentication, and real-time data processing.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Tax Filing Website</h3>
+                    <p class="tech-stack">HTML, CSS, Node.js, Express.js, MongoDB</p>
+                    <ul>
+                        <li>Back-End Development: Built a scalable back-end using Node.js and Express.js, managing server-side logic, authentication, and API integrations for tax data processing.</li>
+                        <li>Front-End Development: Designed and implemented the user interface using React.js, focusing on creating an intuitive, responsive, and accessible design.</li>
+                        <li>Database Management: Managed data storage and retrieval using MongoDB, ensuring secure handling of sensitive tax information.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Fake Review Detection System</h3>
+                    <p class="tech-stack">Python, TensorFlow, Docker, AWS ECS</p>
+                    <ul>
+                        <li>Machine Learning: Developed a BI-LSTM-based deep learning model for identifying fake reviews, achieving 97% accuracy.</li>
+                        <li>Natural Language Processing: Preprocessed reviews using tokenization, padding, and embedding techniques.</li>
+                        <li>Containerization: Dockerized the application for consistent deployments.</li>
+                        <li>Cloud Deployment: Deployed on AWS ECS using Fargate for high availability.</li>
+                        <li>API Development: Built a REST API using Flask for seamless integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abhinavpinamdar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="docs/CV_abhinav.pdf" download class="download-btn">Download CV</a>
+            </div>
+            <p>&copy; 2025 Abhinav Inamdar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function pageTransition(newPageUrl) {
+            gsap.to("body", {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: function() {
+                    window.location.href = newPageUrl;
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.from("body", {
+                opacity: 0,
+                duration: 0.5,
+                delay: 0.2
+            });
+        });
+    </script>
+</body>
+</html>
