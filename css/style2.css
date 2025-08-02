@@ -59,7 +59,7 @@ body {
 
 .gallery-title {
     text-align: center;
-    font-family: 'Playfair Display', serif; /* New, elegant font */
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 3rem;
     color: #fff;
@@ -77,11 +77,9 @@ body {
 .photo-item {
     overflow: hidden;
     border-radius: 8px;
-    position: relative; /* Needed for the title overlay */
+    position: relative;
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    /* Initial state for scroll animation */
-    opacity: 0; 
-    transform: translateY(50px);
+    /* The photos are now visible by default */
 }
 
 .photo-item img {
@@ -95,7 +93,7 @@ body {
     transform: scale(1.05);
 }
 
-/* New Hover Effect: Title Overlay */
+/* Hover Effect: Title Overlay */
 .photo-title {
     position: absolute;
     bottom: 0;
