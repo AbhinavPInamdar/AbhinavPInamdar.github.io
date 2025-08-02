@@ -29,51 +29,51 @@
         <div class="creative-grid">
             <div class="photo-item tall">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9684.jpg" alt="Photography example">
-                <div class="photo-title">Serenity</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9742.jpg" alt="Photography example">
-                <div class="photo-title">Golden Hour</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0593.jpg" alt="Photography example">
-                <div class="photo-title">Vibrant Colors</div>
             </div>
             <div class="photo-item wide">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9678.jpg" alt="Photography example">
-                <div class="photo-title">Coastal Views</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0343.jpg" alt="Photography example">
-                 <div class="photo-title">A Moment of Freedom</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0469.jpg" alt="Photography example">
-                <div class="photo-title">Nature's Patterns</div>
             </div>
             <div class="photo-item wide">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0795.jpg" alt="Photography example">
-                <div class="photo-title">Into the Woods</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0625.jpg" alt="Photography example">
-                <div class="photo-title">Architectural Lines</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9854.jpg" alt="Photography example">
-                 <div class="photo-title">City Nights</div>
             </div>
             <div class="photo-item tall">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9913.jpg" alt="Photography example">
-                <div class="photo-title">Wildlife</div>
             </div>
              <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_N854077_00001.jpg" alt="Photography example">
-                <div class="photo-title">Close-up Details</div>
             </div>
             <div class="photo-item">
                 <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9943.jpg" alt="Photography example">
-                <div class="photo-title">Shadows and Light</div>
+            </div>
+             <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9866.jpg" alt="Photography example">
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9980.jpg" alt="Photography example">
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0626.jpg" alt="Photography example">
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0681.jpg" alt="Photography example">
             </div>
         </div>
     </div>
@@ -87,25 +87,5 @@
             <p>&copy; 2025 Abhinav Inamdar. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Animate each photo item as it enters the viewport
-        gsap.utils.toArray('.photo-item').forEach(item => {
-            gsap.from(item, {
-                opacity: 0,
-                y: 50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: item,
-                    start: 'top 85%', // Start animation when item is 85% from the top
-                    toggleActions: 'play none none none'
-                }
-            });
-        });
-    </script>
 </body>
 </html>

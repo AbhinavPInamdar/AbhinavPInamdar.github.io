@@ -59,7 +59,7 @@ body {
 
 .gallery-title {
     text-align: center;
-    font-family: 'Playfair Display', serif; /* New, elegant font */
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 3rem;
     color: #fff;
@@ -77,42 +77,18 @@ body {
 .photo-item {
     overflow: hidden;
     border-radius: 8px;
-    position: relative; /* Needed for the title overlay */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    /* Initial state for scroll animation */
-    opacity: 0; 
-    transform: translateY(50px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .photo-item:hover img {
     transform: scale(1.05);
-}
-
-/* New Hover Effect: Title Overlay */
-.photo-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: #fff;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.photo-item:hover .photo-title {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Spanning classes */
