@@ -10,14 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-0GG16YDC42');
-    </script>
 </head>
 <body>
     <div class="navbar">
@@ -25,10 +17,10 @@
             <a href="index.html">AI</a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" onclick="pageTransition('index.html'); return false;">Home</a></li>
-            <li><a href="cv.html" class="active" onclick="pageTransition('cv.html'); return false;">CV</a></li>
-            <li><a href="skills.html" onclick="pageTransition('skills.html'); return false;">Skills</a></li>
-            <li><a href="hobbies.html" onclick="pageTransition('hobbies.html'); return false;">hobby</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="hobbies.html">Hobby</a></li>
         </ul>
         <div class="hamburger">
             <span></span>
@@ -42,21 +34,69 @@
             <h1>Abhinav P Inamdar</h1>
             <div class="contact-info">
                 <p><i class="fas fa-map-marker-alt"></i> Bengaluru, KA</p>
-                <p><i class="fas fa-envelope"></i> abhinavsnet@gmail.com</p>
                 <p><i class="fas fa-phone"></i> +91 8217615781</p>
+                <p><i class="fas fa-envelope"></i> abhinavsnet@gmail.com</p>
                 <p><i class="fab fa-linkedin"></i> linkedin.com/in/abhinavpinamdar</p>
                 <p><i class="fas fa-globe"></i> https://abhinavpinamdar.github.io/</p>
             </div>
-            <p class="objective">Software Engineering student • Seeking Software Engineering Internships for Summer 2025</p>
         </header>
 
         <section class="cv-section" id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="section-content">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>BMS College of Engineering, Bengaluru, KA</p>
-                <p>Relevant courses: Data Structures and Algorithms, OS</p>
-                <p>GPA: 8.2</p>
+                <h3>BMS College of Engineering, Bengaluru, KA</h3>
+                <p><strong>Bachelor of Engineering, Major in Computer Science</strong></p>
+                <p>Expected August 2026</p>
+                <p>Cumulative GPA: 8/10.0</p>
+                <p><strong>Relevant Coursework:</strong> Distributed Systems, Data Structures and Algorithms, Software Engineering, Operating Systems, Computer Networks, Database Management Systems, Object-Oriented Design</p>
+            </div>
+        </section>
+
+        <section class="cv-section" id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>EchoFS(DFSS)</h3>
+                    <p class="tech-stack">Go, AWS S3, gRPC API</p>
+                    <ul>
+                        <li>Designed a secure, scalable distributed file system with a modular architecture supporting 10K+ file mappings.</li>
+                        <li>Built a custom metadata server with O(1) lookups under concurrent load.</li>
+                        <li>Reduced per-GB storage costs by 25% by leveraging cloud object storage.</li>
+                        <li>Achieved 90% system availability with fault-tolerant replication.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Fake Review Detection System</h3>
+                    <p class="tech-stack">Python, TensorFlow, Docker, AWS ECS</p>
+                    <ul>
+                        <li>Crafted a Bi-LSTM model with 97% accuracy in analyzing textual patterns and metadata.</li>
+                        <li>Boosted model performance by 40% using advanced NLP techniques.</li>
+                        <li>Improved deployment speed by 45% by containerizing the application.</li>
+                        <li>Supported 100+ daily requests with minimal overhead on AWS ECS.</li>
+                        <li>Shipped a Chrome extension for real-time detection, gaining 50+ users.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Chess Engine</h3>
+                    <p class="tech-stack">Python, OpenCV, C, Microcontroller</p>
+                    <ul>
+                        <li>Reduced decision latency by 30% using Minimax with Alpha-beta pruning.</li>
+                        <li>Extended search depth from 3 to 6 levels with the Negamax variant.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Taxotomy: A Complete Tax Guide</h3>
+                    <p class="tech-stack">Next.js, TypeScript, Redux, AWS DynamoDB</p>
+                    <ul>
+                        <li>Safeguarded 200+ user records with secure role-based authentication.</li>
+                        <li>Increased form completion rate by 40% through an intuitive UX.</li>
+                        <li>Managed 5+ interactive form states with Redux.</li>
+                        <li>Improved scalability by transitioning from MongoDB to AWS DynamoDB.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -65,112 +105,44 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Languages</h3>
-                    <p>Java, Python, JavaScript, C/C++, SQL</p>
+                    <p>Python, Go, TypeScript, JavaScript, C, C++, Java, SQL</p>
                 </div>
                 <div class="skill-category">
                     <h3>Frameworks</h3>
-                    <p>Flask, Vue.js, React.js</p>
+                    <p>Flask, React.js, Next.js</p>
                 </div>
                 <div class="skill-category">
                     <h3>Cloud/Tools</h3>
-                    <p>Git, GitHub, Docker, Kubernetes, AWS (ECS, S3, RDS, Lambda, CloudWatch)</p>
+                    <p>AWS (S3, ECS, DynamoDB, Fargate), Docker, Kubernetes, REST, gRPC APIs, GitHub</p>
                 </div>
                 <div class="skill-category">
                     <h3>Machine Learning</h3>
-                    <p>NumPy, Pandas, TensorFlow</p>
+                    <p>NumPy, Pandas, TensorFlow, Scikit-learn</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Databases/Others</h3>
-                    <p>MongoDB, MySQL</p>
+                    <h3>Databases</h3>
+                    <p>MySQL, MongoDB</p>
                 </div>
             </div>
         </section>
 
-        <section class="cv-section" id="certifications">
-            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <section class="cv-section" id="achievements">
+            <h2><i class="fas fa-trophy"></i> Achievements & Certifications</h2>
             <div class="section-content">
                 <ul>
+                    <li>Regional finalist for SAP Hackfest 2025</li>
+                    <li>LeetCode 1600 rating with 110+ problems solved</li>
                     <li>Python for Data Science (IBM)</li>
                     <li>Machine Learning with Python (IBM)</li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="cv-section" id="projects">
-            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Chess Engine</h3>
-                    <p class="tech-stack">Python, OpenCV, C, Microcontrollers</p>
-                    <ul>
-                        <li>Algorithm Development: Implemented advanced chess algorithms such as Minimax with Alpha-Beta Pruning to optimize the engine's decision-making process.</li>
-                        <li>Lead Developer: Spearheaded the design and implementation of the chess engine, ensuring its ability to make intelligent decisions based on standard chess algorithms and strategies.</li>
-                    </ul>
-                </div>
-
-                <div class="project-card">
-                    <h3>Blood Donation App</h3>
-                    <p class="tech-stack">Dart, Firebase, Node.js</p>
-                    <ul>
-                        <li>Mobile App Development: Led the design and development of the blood donation app using flutter, ensuring cross-platform compatibility for both iOS and Android.</li>
-                        <li>Server-Side Development: Built the back-end using Node.js and Express.js, handling API development, user authentication, and real-time data processing.</li>
-                    </ul>
-                </div>
-
-                <div class="project-card">
-                    <h3>Tax Filing Website</h3>
-                    <p class="tech-stack">HTML, CSS, Node.js, Express.js, MongoDB</p>
-                    <ul>
-                        <li>Back-End Development: Built a scalable back-end using Node.js and Express.js, managing server-side logic, authentication, and API integrations for tax data processing.</li>
-                        <li>Front-End Development: Designed and implemented the user interface using React.js, focusing on creating an intuitive, responsive, and accessible design.</li>
-                        <li>Database Management: Managed data storage and retrieval using MongoDB, ensuring secure handling of sensitive tax information.</li>
-                    </ul>
-                </div>
-
-                <div class="project-card">
-                    <h3>Fake Review Detection System</h3>
-                    <p class="tech-stack">Python, TensorFlow, Docker, AWS ECS</p>
-                    <ul>
-                        <li>Machine Learning: Developed a BI-LSTM-based deep learning model for identifying fake reviews, achieving 97% accuracy.</li>
-                        <li>Natural Language Processing: Preprocessed reviews using tokenization, padding, and embedding techniques.</li>
-                        <li>Containerization: Dockerized the application for consistent deployments.</li>
-                        <li>Cloud Deployment: Deployed on AWS ECS using Fargate for high availability.</li>
-                        <li>API Development: Built a REST API using Flask for seamless integration.</li>
-                    </ul>
-                </div>
             </div>
         </section>
     </div>
 
     <footer>
         <div class="footer-content">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/abhinavpinamdar" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="docs/CV_abhinav.pdf" download class="download-btn">Download CV</a>
-            </div>
             <p>&copy; 2025 Abhinav Inamdar. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function pageTransition(newPageUrl) {
-            gsap.to("body", {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: function() {
-                    window.location.href = newPageUrl;
-                }
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            gsap.from("body", {
-                opacity: 0,
-                duration: 0.5,
-                delay: 0.2
-            });
-        });
-    </script>
 </body>
 </html>

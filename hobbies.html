@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hobby</title>
+    <title>Hobby - Photography</title>
     <link rel="icon" href="docs/programming.png" type="image/svg+xml">
     <link rel="stylesheet" href="css/style2.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-0GG16YDC42');
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="navbar">
@@ -25,34 +20,64 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="cv.html">CV</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="hobbies.html" class="active">hobby</a></li>
+            <li><a href="hobbies.html" class="active">Hobby</a></li>
         </ul>
     </div>
 
-
-    <div class="photo-gallery">
-        <h1>Photography Gallery</h1>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_DSC2992_00001.jpg" alt="Photography Example 1" loading="lazy">
-        </div>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854072_00001.jpg" alt="Photography Example 3" loading="lazy">
-        </div>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854077_00001.jpg" alt="Photography Example 4" loading="lazy">
-        </div>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854274_00001.jpg" alt="Photography Example 4" loading="lazy">
-        </div>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854379_00001.jpg" alt="Photography Example 4" loading="lazy">
-        </div>
-        <div class="photo-item">
-            <img src="https://storage.cloud.google.com/abhinav_portfolio/_N854402_00001.jpg" alt="Photography Example 4" loading="lazy">
+    <div class="gallery-wrapper">
+        <h1 class="gallery-title">Recent Work</h1>
+        <div class="creative-grid">
+            <div class="photo-item tall">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9684.jpg" alt="Photography example">
+                <div class="photo-title">Serenity</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9742.jpg" alt="Photography example">
+                <div class="photo-title">Golden Hour</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0593.jpg" alt="Photography example">
+                <div class="photo-title">Vibrant Colors</div>
+            </div>
+            <div class="photo-item wide">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9678.jpg" alt="Photography example">
+                <div class="photo-title">Coastal Views</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0343.jpg" alt="Photography example">
+                 <div class="photo-title">A Moment of Freedom</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0469.jpg" alt="Photography example">
+                <div class="photo-title">Nature's Patterns</div>
+            </div>
+            <div class="photo-item wide">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0795.jpg" alt="Photography example">
+                <div class="photo-title">Into the Woods</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC0625.jpg" alt="Photography example">
+                <div class="photo-title">Architectural Lines</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9854.jpg" alt="Photography example">
+                 <div class="photo-title">City Nights</div>
+            </div>
+            <div class="photo-item tall">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9913.jpg" alt="Photography example">
+                <div class="photo-title">Wildlife</div>
+            </div>
+             <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_N854077_00001.jpg" alt="Photography example">
+                <div class="photo-title">Close-up Details</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://abhinav-photo-gallery.s3.ap-south-1.amazonaws.com/_DSC9943.jpg" alt="Photography example">
+                <div class="photo-title">Shadows and Light</div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="social-links">
@@ -63,35 +88,24 @@
         </div>
     </footer>
 
-    <!-- GSAP Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script>
-        window.onload = function() {
-            // Fade-in and scale-up animation for photo items
-            gsap.from(".photo-item", {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate each photo item as it enters the viewport
+        gsap.utils.toArray('.photo-item').forEach(item => {
+            gsap.from(item, {
                 opacity: 0,
-                scale: 0.8,
-                duration: 1,
-                stagger: 0.2
+                y: 50,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%', // Start animation when item is 85% from the top
+                    toggleActions: 'play none none none'
+                }
             });
-
-            // Scale-up on hover effect for photo items
-            const photoItems = document.querySelectorAll(".photo-item");
-            photoItems.forEach(item => {
-                item.addEventListener("mouseenter", () => {
-                    gsap.to(item, {
-                        scale: 1.05,
-                        duration: 0.3
-                    });
-                });
-
-                item.addEventListener("mouseleave", () => {
-                    gsap.to(item, {
-                        scale: 1,
-                        duration: 0.3
-                    });
-                });
-            });
-        }
+        });
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Base styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #555;
-    color: #333;
+    background-color: #111;
+    color: #fff;
 }
 
-/* Updated Navbar Styles */
+/* Navbar styles */
 .navbar {
     background-color: #171616;
     padding: 0.5rem 2rem;
@@ -23,88 +22,123 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     height: 50px;
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: 700;
 }
 
 .logo a {
     text-decoration: none;
     color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 1.5rem;
-    height: 100%;
-    align-items: center;
-}
-
-.nav-links li {
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.5rem 0.8rem;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #3498db;
-}
-
+.nav-links a:hover,
 .nav-links a.active {
     color: #3498db;
 }
 
-/* Photography Gallery Styles */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* Gallery Styles */
+.gallery-wrapper {
     max-width: 1200px;
-    margin: 60px auto 0;
-    padding: 2rem;
-    background-color: white;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    margin: 0 auto;
+    padding: 100px 2rem 4rem;
 }
 
-.photo-gallery h1 {
+.gallery-title {
     text-align: center;
-    font-size: 2.5rem;
-    color: #171616;
-    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif; /* New, elegant font */
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.creative-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: 1rem;
 }
 
 .photo-item {
-    width: 100%;
-    height: 300px;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative; /* Needed for the title overlay */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    /* Initial state for scroll animation */
+    opacity: 0; 
+    transform: translateY(50px);
 }
 
 .photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .photo-item:hover img {
     transform: scale(1.05);
+}
+
+/* New Hover Effect: Title Overlay */
+.photo-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.photo-item:hover .photo-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Spanning classes */
+.photo-item.tall {
+    grid-row: span 2;
+}
+
+.photo-item.wide {
+    grid-column: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .creative-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .creative-grid {
+        grid-template-columns: 1fr;
+    }
+    .photo-item.wide, .photo-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
 /* Footer Styles */
@@ -135,61 +169,3 @@ footer {
 .social-links a:hover {
     color: #3498db;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem 1rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-
-    .cv-content {
-        padding: 1rem;
-        margin-top: 60px;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cv-header h1 {
-        font-size: 2rem;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .navbar, 
-    footer {
-        display: none;
-    }
-
-    .cv-content {
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-    }
-
-    .project-card {
-        break-inside: avoid;
-        box-shadow: none;
-    }
-
-    .cv-content {
-        font-size: 11pt;
-    }
-
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-}
-
