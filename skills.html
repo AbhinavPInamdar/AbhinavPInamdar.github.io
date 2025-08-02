@@ -16,24 +16,6 @@
             padding-top: 50px; /* Account for fixed navbar */
         }
 
-  
-   
-        /* Previous styles remain the same */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            padding-top: 50px;
-        }
-
-        /* Updated Navbar Styles */
         .navbar {
             background-color: #171616;
             padding: 0 2rem;
@@ -48,39 +30,17 @@
             height: 50px;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            flex: 0 0 auto; /* Prevents logo from growing/shrinking */
-        }
-
         .logo a {
             text-decoration: none;
             color: white;
-            padding: 0.5rem 0;
-            display: block;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: flex-end; /* Pushes items to the right */
-            flex: 1; /* Takes up remaining space */
-            margin-left: 2rem; /* Space between logo and nav items */
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 1.5rem;
-            height: 100%;
-            align-items: center;
-            justify-content: flex-end; /* Aligns items to the right */
-        }
-
-        .nav-links li {
-            height: 100%;
-            display: flex;
-            align-items: center;
         }
 
         .nav-links a {
@@ -92,57 +52,14 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover, .nav-links a.active {
             color: #3498db;
-        }
-
-        .nav-links a.active {
-            color: #3498db;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            margin-left: 1rem;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 2px 0;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 0 1rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-container {
-                margin-left: 0;
-            }
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #fff;
         }
 
         .skills-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
-            font-family: system-ui, -apple-system, sans-serif;
         }
 
         .section-title {
@@ -151,7 +68,6 @@
             color: #ffffff;
             margin-bottom: 3rem;
             font-weight: 600;
-            letter-spacing: 1px;
         }
 
         .skills-grid {
@@ -165,14 +81,13 @@
             border-radius: 1rem;
             padding: 2rem;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
             border: 1px solid #222222;
+            transition: all 0.3s ease;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-            border-color: #333333;
+            border-color: #3498db;
         }
 
         .category-title {
@@ -181,59 +96,31 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #333333;
-            letter-spacing: 0.5px;
         }
 
-        .skill-item {
-            margin-bottom: 1.5rem;
+        .tier-title {
+            color: #3498db;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .skill-header {
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        .skill-name {
+        .skill-list li {
+            background-color: #222;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
             color: #e0e0e0;
-            font-weight: 500;
         }
 
-        .skill-percentage {
-            color: #808080;
-            font-size: 0.875rem;
-        }
-
-        .progress-bar {
-            background: #1a1a1a;
-            border-radius: 0.5rem;
-            height: 0.5rem;
-            overflow: hidden;
-            border: 1px solid #333333;
-        }
-
-        .progress-fill {
-            height: 100%;
-            border-radius: 0.5rem;
-            background: linear-gradient(90deg, #ffffff, #666666);
-            transition: width 1s ease-in-out;
-            opacity: 0.8;
-        }
-
-        .skill-category:hover .progress-fill {
-            opacity: 1;
-            background: linear-gradient(90deg, #ffffff, #808080);
-        }
-
-        @media (max-width: 768px) {
-            .skills-container {
-                padding: 2rem 1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -247,155 +134,68 @@
             <li><a href="skills.html" class="active">Skills</a></li>
             <li><a href="hobbies.html">Hobby</a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </div>
     <section class="skills-container">
         <h2 class="section-title">Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3 class="category-title">Programming Languages</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-percentage">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Java</span>
-                        <span class="skill-percentage">50%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">C/C++</span>
-                        <span class="skill-percentage">40%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%"></div>
-                    </div>
-                </div>
+                <h3 class="category-title">Languages</h3>
+                <h4 class="tier-title">Advanced</h4>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>Go</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                </ul>
+                <h4 class="tier-title">Proficient</h4>
+                <ul class="skill-list">
+                    <li>Java</li>
+                    <li>C/C++</li>
+                    <li>SQL</li>
+                </ul>
             </div>
 
             <div class="skill-category">
-                <h3 class="category-title">Frameworks & Libraries</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">TensorFlow</span>
-                        <span class="skill-percentage">70%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">React.js</span>
-                        <span class="skill-percentage">50%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Flask</span>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%"></div>
-                    </div>
-                </div>
+                <h3 class="category-title">Frameworks</h3>
+                 <h4 class="tier-title">Advanced</h4>
+                <ul class="skill-list">
+                    <li>Next.js</li>
+                </ul>
+                <h4 class="tier-title">Proficient</h4>
+                <ul class="skill-list">
+                    <li>React.js</li>
+                    <li>Flask</li>
+                </ul>
             </div>
 
             <div class="skill-category">
                 <h3 class="category-title">Cloud & DevOps</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Docker</span>
-                        <span class="skill-percentage">40%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">AWS Services</span>
-                        <span class="skill-percentage">50%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Kubernetes</span>
-                        <span class="skill-percentage">30%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 30%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Git/GitHub</span>
-                        <span class="skill-percentage">40%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%"></div>
-                    </div>
-                </div>
+                <h4 class="tier-title">Advanced</h4>
+                <ul class="skill-list">
+                    <li>AWS</li>
+                    <li>Docker</li>
+                    <li>REST/gRPC APIs</li>
+                </ul>
+                <h4 class="tier-title">Proficient</h4>
+                <ul class="skill-list">
+                    <li>Kubernetes</li>
+                    <li>GitHub</li>
+                </ul>
             </div>
 
             <div class="skill-category">
-                <h3 class="category-title">Data & ML</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Machine Learning</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">NumPy/Pandas</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">SQL/MongoDB</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
+                <h3 class="category-title">Databases & ML</h3>
+                 <h4 class="tier-title">Advanced</h4>
+                <ul class="skill-list">
+                    <li>TensorFlow</li>
+                    <li>NumPy/Pandas</li>
+                </ul>
+                <h4 class="tier-title">Proficient</h4>
+                <ul class="skill-list">
+                    <li>Scikit-learn</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
             </div>
         </div>
     </section>

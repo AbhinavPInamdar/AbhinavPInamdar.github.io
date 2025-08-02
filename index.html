@@ -13,21 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script>
-        // Page transition effect using GSAP
-        function pageTransition(newPageUrl) {
-            gsap.to("body", {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: function() {
-                    window.location.href = newPageUrl;
-                }
-            });
-        }
         document.addEventListener("DOMContentLoaded", function() {
             gsap.from("body", {
                 opacity: 0,
-                duration: 0.5,  // Duration of the fade-in effect
-                delay: 0.2      // A slight delay before the fade-in starts (optional)
+                duration: 0.5,
+                delay: 0.2
             });
 
             // GSAP animations for hero section elements
@@ -44,42 +34,9 @@
                 duration: 1,
                 delay: 1
             });
-
-            gsap.from("#remove-hero-btn", {
-                opacity: 0,
-                y: 50,
-                duration: 1.5,
-                delay: 1.5
-            });
-
-            const removeHeroBtn = document.getElementById("remove-hero-btn");
-            const heroDiv = document.querySelector(".hero");
-            const particlesDiv = document.getElementById("particles-js");
-
-            // When the button is clicked, hide the hero section and bring particles to the front
-            removeHeroBtn.addEventListener("click", function() {
-                if (heroDiv) {
-                    heroDiv.style.display = "none"; // Hide the hero div
-                }
-
-                if (particlesDiv) {
-                    particlesDiv.style.zIndex = "10";  // Bring particles to the front
-                }
-
-                // After 30 seconds, bring the hero section back
-                setTimeout(function() {
-                    if (heroDiv) {
-                        heroDiv.style.display = "block"; // Show the hero div
-                    }
-                    if (particlesDiv) {
-                        particlesDiv.style.zIndex = "1"; // Reset the z-index of particles
-                    }
-                }, 3000); // 30 seconds timer
-            });
         });
     </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GG16YDC42"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -91,26 +48,20 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <!-- Title Logo (Icon or Text) -->
-            <a href="index.html" style="text-decoration: none; color: white; font-size: 24px;">
-                 AI 
-            </a>
+            <a href="index.html" style="text-decoration: none; color: white; font-size: 24px;">AI</a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" onclick="event.preventDefault(); pageTransition('index.html');">Home</a></li>
-            <li><a href="cv.html" onclick="event.preventDefault(); pageTransition('cv.html');">CV</a></li>
-            <li><a href="skills.html" onclick="event.preventDefault(); pageTransition('skills.html');">Skills</a></li>
-            <li><a href="hobbies.html" onclick="event.preventDefault(); pageTransition('hobbies.html');">Hobby</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="hobbies.html">Hobby</a></li>
         </ul>
     </div>
 
-    <!-- Section containing particles.js and hero -->
     <div id="particle-section">
-        <div id="particles-js"></div> <!-- Particles Container -->
-
-        <div class="hero">
+        <div id="particles-js"></div> <div class="hero">
             <p>Abhinav P Inamdar</p>
-            <p>Student, Developer, Photographer</p>
+            <p>Software Engineer | Specializing in Distributed Systems & Machine Learning</p>
             <div class="icons">
                 <a href="https://github.com/AbhinavPInamdar" target="_blank">
                     <i class="fa-brands fa-github"></i>
@@ -119,8 +70,6 @@
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
-            <!-- Button to remove hero section -->
-            <button id="remove-hero-btn">Enable Particles</button>
         </div>
     </div>
 
@@ -131,35 +80,31 @@
         <div class="projects">
             <ul>
                 <li style="--accent-color:#41516C">
-                    <div class="date">2022 - Present</div>
-                    <div class="title">Chess Engine</div>
-                    <div class="descr">Algorithm Development: Implemented advanced chess algorithms such as Minimax with Alpha-Beta Pruning to optimize the engine’s decision-making process.</div>
+                    <div class="date">Jan 2025</div>
+                    <div class="title">EchoFS (Distributed File System)</div>
+                    <div class="descr">Designed and engineered a secure, scalable distributed file system using Go and AWS S3, supporting 10K+ file mappings and achieving 90% system availability.</div>
                 </li>
                 <li style="--accent-color:#41516C">
-                    <div class="date">2023-2024</div>
-                    <div class="title">Taxatomy: Tax Filing Website</div>
-                    <div class="descr">
-                        Built a scalable back-end with Node.js and Express.js for tax data processing, and an intuitive React.js front-end. Managed secure data storage with MongoDB, using encryption and access controls.
-                    </div>
-                </li>
-                <li style="--accent-color:#41516C">
-                    <div class="date">2024</div>
+                    <div class="date">Nov 2024</div>
                     <div class="title">Fake Review Detection System</div>
-                    <div class="descr">Developed a BI-LSTM-based deep learning model for fake review detection with <b>97% accuracy</b>.
-                        Deployed the system using Flask, Docker, and AWS ECS for high scalability and availability.</div>
+                    <div class="descr">Developed a BI-LSTM-based deep learning model with <b>97% accuracy</b>. Deployed the system using Flask, Docker, and AWS ECS for high scalability and availability. Shipped a Chrome extension used by 50+ users.</div>
+                </li>
+                <li style="--accent-color:#41516C">
+                    <div class="date">Jan 2024</div>
+                    <div class="title">Chess Engine</div>
+                    <div class="descr">Developed a chess engine using the Minimax algorithm with Alpha-beta pruning, reducing decision latency by 30% and extending search depth to 6-ply.</div>
+                </li>
+                 <li style="--accent-color:#41516C">
+                    <div class="date">Oct 2023</div>
+                    <div class="title">Taxotomy: A Complete Tax Guide</div>
+                    <div class="descr">Spearheaded a full-stack financial platform using Next.js and AWS DynamoDB, safeguarding over 200 user records and increasing form completion by 40%.</div>
                 </li>
             </ul>
-        </div> 
+        </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <a href="#home" style="text-decoration: none; color: #41516C;">
-                    
-                </a>
-            </div>
             <div class="social-links">
                 <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/abhinavpinamdar" target="_blank"><i class="fab fa-github"></i></a>
