@@ -45,55 +45,63 @@
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="section-content">
                 <h3>BMS College of Engineering, Bengaluru, KA</h3>
-                <p><strong>Bachelor of Engineering, Major in Computer Science</strong></p>
-                <p>Expected August 2026</p>
-                <p>Cumulative GPA: 8.0/10.0</p>
-                <p><strong>Relevant Coursework:</strong> Distributed Systems, Operating Systems, Computer Networks, Database Management Systems, Data Structures and Algorithms, Object-Oriented Design</p>
+                <p><strong>B.E. Computer Science</strong> (GPA: 8.0/10, Top 20%)</p>
+                <p>Aug 2026</p>
+                <p><strong>Relevant Coursework:</strong> Distributed Systems, Operating Systems, Computer Networks, DBMS, Data Structures and Algorithms, Optimization Techniques, Linear Algebra, Probability and Statistics.</p>
             </div>
         </section>
 
         <section class="cv-section" id="projects">
-            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <h2><i class="fas fa-project-diagram"></i> Selected Projects</h2>
             <div class="projects-grid">
+                <div class="project-card">
+                    <h3>EchoFS: Distributed File System</h3>
+                    <p class="tech-stack">Go, AWS S3, gRPC, DynamoDB</p>
+                    <ul>
+                        [cite_start]<li>Designed a distributed file system capable of dynamically switching between strong and eventual consistency to optimize latency. [cite: 13]</li>
+                        [cite_start]<li>Engineered metadata and data tiers with hash-based partitioning and replication for durability. [cite: 14]</li>
+                        [cite_start]<li>Developed an adaptive policy controller leveraging real-time telemetry to improve write performance by 25%. [cite: 15]</li>
+                        [cite_start]<li>Integrated AWS S3 as a scalable backend for fault isolation and hybrid storage. [cite: 16]</li>
+                    </ul>
+                </div>
                 <div class="project-card">
                     <h3>TCO Configurator</h3>
                     <p class="tech-stack">Go, Kubernetes, Promtail, Prometheus</p>
                     <ul>
-                        <li>Built a Go-based policy engine with Kubernetes CRDs to enforce log volume budgets, enabling teams to self-manage infra costs.</li>
-                        <li>Implemented dynamic actions (Allow, Throttle, Drop) based on daily usage, reducing central ops overhead.</li>
-                        <li>Achieved 90% unit test coverage on policy engine and type conversions, ensuring reliability in production-scale clusters.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>EchoFS Distributed File System</h3>
-                    <p class="tech-stack">Go, AWS S3, Custom Metadata Server, gRPC API</p>
-                    <ul>
-                        <li>Designed a secure, scalable distributed file system using Go and AWS S3 supporting 10K+ file mappings.</li>
-                        <li>Built a metadata server enabling O(1) key-based chunk lookup with concurrent request handling.</li>
-                        <li>Implemented unit tests for core file operations and metadata functions, achieving comprehensive error handling validation.</li>
-                        <li>Configured fault-tolerant replication and stateless APIs to maintain service resilience during peak loads.</li>
+                        [cite_start]<li>Built a multi-tiered control plane with distributed policy enforcement using Kubernetes CRDs. [cite: 19]</li>
+                        [cite_start]<li>Applied linear and heuristic optimization algorithms to balance log traffic under resource constraints. [cite: 20]</li>
+                        [cite_start]<li>Reduced system overhead by 30% through algorithmic throttling and adaptive backoff strategies. [cite: 21]</li>
                     </ul>
                 </div>
                 <div class="project-card">
                     <h3>Fake Review Detection System</h3>
                     <p class="tech-stack">Python, TensorFlow, Docker, AWS ECS</p>
                     <ul>
-                        <li>Crafted a Bi-LSTM model that achieved 97% accuracy by analyzing textual patterns, metadata, and reviewer behavior.</li>
-                        <li>Applied NLP preprocessing (tokenization, embeddings), improving model performance significantly over traditional classifiers.</li>
-                        <li>Dockerized the ML model and Flask API for reproducible deployment and consistent environments.</li>
-                        <li>Rolled out the system on AWS ECS (Fargate), supporting daily requests with minimal ops overhead.</li>
+                        [cite_start]<li>Built a Bi-LSTM model (97% accuracy) to detect fake reviews and deployed it via Docker on AWS ECS. [cite: 25]</li>
+                        [cite_start]<li>Integrated a Chrome extension for real-time predictions, improving response latency by 40%. [cite: 26]</li>
+                        [cite_start]<li>Showcased end-to-end design from model training to real-world product deployment. [cite: 27]</li>
                     </ul>
                 </div>
                 <div class="project-card">
-                    <h3>Taxotomy, Complete Tax Guide</h3>
-                    <p class="tech-stack">Next.js, TypeScript, Redux, AWS DynamoDB</p>
+                    <h3>Taxotomy: Complete Tax Guide</h3>
+                    <p class="tech-stack">Next.js, TypeScript, Redux, DynamoDB</p>
                     <ul>
-                        <li>Spearheaded a full-stack financial platform with authentication and modular REST APIs, safeguarding 200+ user records.</li>
-                        <li>Secured backend services with layered security controls like JWT, ensuring resilient data access.</li>
-                        <li>Redesigned frontend UX flow using Next.js, improving user interaction and form completion efficiency.</li>
-                        <li>Switched from MongoDB to DynamoDB, enabling auto-scaling and reduced operational complexity.</li>
+                        [cite_start]<li>Engineered a secure tax planning platform supporting authentication, data persistence, and regime comparison. [cite: 30]</li>
+                        [cite_start]<li>Migrated backend from MongoDB to DynamoDB, achieving 3x query performance and lower cost. [cite: 31]</li>
+                        [cite_start]<li>Designed modular APIs and reusable components for maintainability and speed. [cite: 32]</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="cv-section" id="research">
+            <h2><i class="fas fa-book-open"></i> Open Source & Research</h2>
+            <div class="section-content">
+                <ul>
+                    [cite_start]<li>Contributor to distributed systems open-source projects. [cite: 34]</li>
+                    [cite_start]<li>Research under review: Adaptive consistency and distributed task scheduling (IEEE TCC, 2025). [cite: 35]</li>
+                    [cite_start]<li>Exploring decentralized consistency for onchain and blockchain-based storage systems. [cite: 36]</li>
+                </ul>
             </div>
         </section>
 
@@ -101,38 +109,39 @@
             <h2><i class="fas fa-code"></i> Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <p>Python, Go, TypeScript, JavaScript, C, Java, SQL</p>
+                    <h3>Languages</h3>
+                    <p>Go, Python, C, C++, TypeScript, Java</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Web Frameworks</h3>
-                    <p>Flask, React.js, Next.js</p>
+                    <h3>Backend & Cloud</h3>
+                    <p>AWS (S3, ECS, DynamoDB), Docker, Kubernetes, gRPC, REST APIs</p>
                 </div>
                  <div class="skill-category">
-                    <h3>Cloud Technologies</h3>
-                    <p>AWS (S3, ECS, DynamoDB, Fargate), Docker, Kubernetes</p>
-                </div>
-                <div class="skill-category">
-                    <h3>APIs and Services</h3>
-                    <p>REST APIs, gRPC APIs, Microservices Architecture</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <p>NumPy, Pandas, TensorFlow, Scikit-learn</p>
+                    <h3>Systems & Infra</h3>
+                    <p>Distributed Systems, Concurrency, Scalability, Fault Tolerance, Observability</p>
                 </div>
                 <div class="skill-category">
                     <h3>Databases</h3>
-                    <p>MySQL, MongoDB, DynamoDB</p>
+                    <p>PostgreSQL, DynamoDB, MongoDB, MySQL</p>
                 </div>
             </div>
         </section>
 
         <section class="cv-section" id="achievements">
-            <h2><i class="fas fa-trophy"></i> Achievements</h2>
+            <h2><i class="fas fa-trophy"></i> Achievements & Competitions</h2>
             <div class="section-content">
                 <ul>
-                    <li>Regional finalist for SAP Hackfest 2025</li>
-                    <li>LeetCode 1600 rating with 150+ problems solved</li>
+                    [cite_start]<li><strong>Regional Finalist, SAP Hackfest 2025:</strong> Top 20/500+ for cloud-native infrastructure solution. [cite: 41]</li>
+                    <li><strong>Competitive Programming:</strong> 200+ problems solved. [cite_start]LeetCode 1610+, Codeforces 1300+, CodeChef 2* (1400+). [cite: 42]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section" id="leadership">
+            <h2><i class="fas fa-users"></i> Leadership & Activities</h2>
+            <div class="section-content">
+                <ul>
+                    [cite_start]<li><strong>Junior Coordinator, College Fest 2024:</strong> Led a 15-member cross-functional team executing 10+ events for 1,000+ attendees. [cite: 44]</li>
                 </ul>
             </div>
         </section>
