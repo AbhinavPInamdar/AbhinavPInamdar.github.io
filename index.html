@@ -45,23 +45,40 @@
 
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none; color: white; font-size: 24px;">AI</a>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AI</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="skills.html">Skills</a>
+            <a href="hobbies.html">Hobbies</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="hobbies.html">Hobby</a></li>
-        </ul>
-    </div>
+    </nav>
+
 
     <div id="particle-section">
         <div id="particles-js"></div> 
         <div class="hero">
-            <p>Abhinav P Inamdar</p>
-            <p>Software Engineer | Specializing in Distributed Systems & Machine Learning</p>
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                <span class="status-text">System Online</span>
+            </div>
+            <p class="glitch-text" data-text="Abhinav P Inamdar">Abhinav P Inamdar</p>
+            <p class="typing-text"></p>
+            <div class="system-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Uptime</span>
+                    <span class="stat-value" id="uptime">99.9%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Latency</span>
+                    <span class="stat-value" id="latency">12ms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Interactions</span>
+                    <span class="stat-value" id="interactions">0</span>
+                </div>
+            </div>
             <div class="icons">
                 <a href="https://github.com/AbhinavPInamdar" target="_blank">
                     <i class="fa-brands fa-github"></i>
@@ -74,30 +91,153 @@
     </div>
 
     <script src="script/app.js"></script>
+    <script src="script/script1.js"></script>
+
+    <div class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>// About Me</h2>
+                <p>I build systems that scale. From distributed file systems handling 10K+ files to ML models with 97% accuracy, I focus on creating robust, production-ready solutions.</p>
+                <p>My approach: <span class="highlight">Design for failure</span>, <span class="highlight">optimize for performance</span>, and <span class="highlight">ship with confidence</span>.</p>
+                <div class="tech-stack">
+                    <span class="stack-item">Go</span>
+                    <span class="stack-item">Python</span>
+                    <span class="stack-item">Kubernetes</span>
+                    <span class="stack-item">AWS</span>
+                    <span class="stack-item">Docker</span>
+                    <span class="stack-item">TensorFlow</span>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <pre><code><span class="code-keyword">func</span> <span class="code-function">BuildSomethingAwesome</span>() {
+    <span class="code-keyword">for</span> challenge := <span class="code-keyword">range</span> problems {
+        solution := <span class="code-function">Solve</span>(challenge)
+        <span class="code-function">Deploy</span>(solution)
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="info">
-        <h1 style="text-align: center;">Projects</h1>
+        <h1 style="text-align: center;">
+            <span class="git-branch"><i class="fas fa-code-branch"></i> main</span> / Projects <span class="terminal-cursor">_</span>
+        </h1>
         <div class="projects">
             <ul>
-                <li style="--accent-color:#41516C">
-                    <div class="date">Aug 2025</div>
-                    <div class="title">TCO Configurator</div>
-                    <div class="descr">Built a Go-based policy engine with Kubernetes CRDs to enforce log volume budgets and enable teams to self-manage infrastructure costs.</div>
+                <li style="--accent-color:#00d9ff" class="project-card" data-project="tco">
+                    <div>
+                        <div class="date"><i class="fas fa-cube"></i> Aug 2024</div>
+                        <div class="title">TCO Configurator <span class="tech-badge">Go</span><span class="tech-badge">K8s</span></div>
+                        <div class="descr">Built a Go-based policy engine with Kubernetes CRDs to enforce log volume budgets and enable teams to self-manage infrastructure costs.</div>
+                        <div class="metrics">
+                            <span class="metric"><i class="fas fa-server"></i> Policy Engine</span>
+                            <span class="metric"><i class="fas fa-chart-line"></i> Cost Optimization</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>The Challenge</h4>
+                                <p>Teams were exceeding log volume budgets without visibility into costs, leading to unpredictable infrastructure expenses.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>The Solution</h4>
+                                <p>Custom Kubernetes operator with policy enforcement, real-time budget tracking, and self-service cost management dashboard.</p>
+                            </div>
+                            <div class="architecture">
+                                <pre>┌─────────┐    ┌──────────┐    ┌─────────┐
+│ K8s CRD │───▶│ Operator │───▶│ Metrics │
+└─────────┘    └──────────┘    └─────────┘</pre>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li style="--accent-color:#41516C">
-                    <div class="date">Jan 2025</div>
-                    <div class="title">EchoFS (Distributed File System)</div>
-                    <div class="descr">Designed and engineered a secure, scalable distributed file system using Go and AWS S3, supporting 10K+ file mappings and achieving 90% system availability.</div>
+                <li style="--accent-color:#ff6b6b" class="project-card" data-project="echofs">
+                    <div>
+                        <div class="date"><i class="fas fa-cube"></i> Jan 2025</div>
+                        <div class="title">EchoFS <span class="tech-badge">Go</span><span class="tech-badge">AWS</span></div>
+                        <div class="descr">Designed and engineered a secure, scalable distributed file system using Go and AWS S3, supporting 10K+ file mappings and achieving 90% system availability.</div>
+                        <div class="metrics">
+                            <span class="metric"><i class="fas fa-database"></i> 10K+ Files</span>
+                            <span class="metric"><i class="fas fa-check-circle"></i> 90% Uptime</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>The Challenge</h4>
+                                <p>Building a distributed file system that handles concurrent access, ensures data consistency, and scales horizontally.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>The Solution</h4>
+                                <p>Implemented consistent hashing for data distribution, write-ahead logging for durability, and S3 as the storage backend.</p>
+                            </div>
+                            <div class="architecture">
+                                <pre>Client ──▶ Load Balancer ──▶ Node Pool
+                              │
+                              ▼
+                          AWS S3 (Storage)</pre>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li style="--accent-color:#41516C">
-                    <div class="date">Nov 2024</div>
-                    <div class="title">Fake Review Detection System</div>
-                    <div class="descr">Developed a BI-LSTM-based deep learning model with <b>97% accuracy</b>. Deployed the system using Flask, Docker, and AWS ECS for high scalability and availability. Shipped a Chrome extension used by 50+ users.</div>
+                <li style="--accent-color:#4ecdc4" class="project-card" data-project="review">
+                    <div>
+                        <div class="date"><i class="fas fa-cube"></i> Nov 2024</div>
+                        <div class="title">Fake Review Detection <span class="tech-badge">ML</span><span class="tech-badge">Docker</span></div>
+                        <div class="descr">Developed a BI-LSTM-based deep learning model with <b>97% accuracy</b>. Deployed the system using Flask, Docker, and AWS ECS for high scalability and availability. Shipped a Chrome extension used by 50+ users.</div>
+                        <div class="metrics">
+                            <span class="metric"><i class="fas fa-brain"></i> 97% Accuracy</span>
+                            <span class="metric"><i class="fas fa-users"></i> 50+ Users</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>The Challenge</h4>
+                                <p>Detecting fake reviews in real-time with high accuracy while maintaining low latency for browser extension users.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>The Solution</h4>
+                                <p>BI-LSTM model trained on 50K+ reviews, containerized API with auto-scaling, and lightweight Chrome extension with local caching.</p>
+                            </div>
+                            <div class="architecture">
+                                <pre>Extension ──▶ API Gateway ──▶ ECS Tasks
+                                    │
+                                    ▼
+                              ML Model (97%)</pre>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                 <li style="--accent-color:#41516C">
-                    <div class="date">Oct 2023</div>
-                    <div class="title">Taxotomy: A Complete Tax Guide</div>
-                    <div class="descr">Spearheaded a full-stack financial platform using Next.js and AWS DynamoDB, safeguarding over 200 user records and increasing form completion by 40%.</div>
+                 <li style="--accent-color:#95e1d3" class="project-card" data-project="taxonomy">
+                    <div>
+                        <div class="date"><i class="fas fa-cube"></i> Oct 2023</div>
+                        <div class="title">Taxonomy <span class="tech-badge">Next.js</span><span class="tech-badge">DynamoDB</span></div>
+                        <div class="descr">Spearheaded a full-stack financial platform using Next.js and AWS DynamoDB, safeguarding over 200 user records and increasing form completion by 40%.</div>
+                        <div class="metrics">
+                            <span class="metric"><i class="fas fa-shield-alt"></i> 200+ Records</span>
+                            <span class="metric"><i class="fas fa-arrow-up"></i> 40% Increase</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>The Challenge</h4>
+                                <p>Tax forms are complex and intimidating, leading to high abandonment rates and user frustration.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>The Solution</h4>
+                                <p>Progressive disclosure UI, real-time validation, auto-save functionality, and guided workflows that increased completion by 40%.</p>
+                            </div>
+                            <div class="architecture">
+                                <pre>Next.js App ──▶ API Routes ──▶ DynamoDB
+     │
+     ▼
+Auth (Secure)</pre>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -105,11 +245,34 @@
 
     <footer>
         <div class="footer-content">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/abhinavpinamdar" target="_blank"><i class="fab fa-github"></i></a>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>$ whoami</h3>
+                    <p>Software Engineer building distributed systems and ML solutions. Always learning, always shipping.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>$ ls -la /contact</h3>
+                    <div class="contact-links">
+                        <a href="https://linkedin.com/in/abhinavpinamdar" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/abhinavpinamdar" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>$ cat status.log</h3>
+                    <div class="status-log">
+                        <p><span class="log-time">[2025]</span> Building cool stuff</p>
+                        <p><span class="log-time">[∞]</span> Learning new tech</p>
+                        <p><span class="log-time">[24/7]</span> Open to opportunities</p>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2025 Abhinav Inamdar. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p><span class="prompt">~$</span> &copy; 2025 Abhinav Inamdar. Built with Go, grit, and caffeine.</p>
+            </div>
         </div>
     </footer>
 </body>

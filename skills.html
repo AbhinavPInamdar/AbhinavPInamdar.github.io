@@ -5,190 +5,300 @@
     <link rel="icon" href="docs/programming.png" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            padding-top: 50px; /* Account for fixed navbar */
-        }
-
-        .navbar {
-            background-color: #171616;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            height: 50px;
-        }
-
-        .logo a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 0.8rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #3498db;
-        }
-
-        .skills-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #ffffff;
-            margin-bottom: 3rem;
-            font-weight: 600;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: #111111;
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid #222222;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            border-color: #3498db;
-        }
-
-        .category-title {
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #333333;
-        }
-
-        .skill-list {
-            list-style: none;
-            padding-left: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-list li {
-            background-color: #222;
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            color: #e0e0e0;
-            border: 1px solid #333;
-            transition: background-color 0.2s ease;
-        }
-
-        .skill-list li:hover {
-            background-color: #333;
-            border-color: #3498db;
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html">AI</a>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AI</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="skills.html">Skills</a>
+            <a href="hobbies.html">Hobbies</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="skills.html" class="active">Skills</a></li>
-            <li><a href="hobbies.html">Hobby</a></li>
-        </ul>
+    </nav>
+
+    <div class="skills-container">
+        <!-- Terminal Section -->
+        <div class="terminal-section">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">skills.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">~$</span> <span class="command">./skills.sh --list</span>
+                    </div>
+                    <div class="terminal-output">
+                        <div class="skill-group">
+                            <div class="skill-header">[Languages]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">Go</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript/TypeScript</span>
+                                <span class="skill-tag">C/C++</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-header">[Cloud & Infrastructure]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">AWS (S3, ECS, DynamoDB, Lambda)</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-header">[Backend & APIs]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">gRPC</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">Microservices</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-header">[Databases]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">DynamoDB</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-header">[Machine Learning]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">BI-LSTM</span>
+                                <span class="skill-tag">NLP</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-header">[Frontend]</div>
+                            <div class="skill-items">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Next.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">~$</span> <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Architecture -->
+        <div class="architecture-section">
+            <h2 class="section-title">
+                <i class="fas fa-layer-group"></i> Tech Stack Architecture
+            </h2>
+            <div class="architecture-diagram">
+                <div class="arch-layer" data-layer="frontend">
+                    <div class="layer-title">Frontend Layer</div>
+                    <div class="layer-techs">
+                        <span class="tech-node">React</span>
+                        <span class="tech-node">Next.js</span>
+                        <span class="tech-node">TypeScript</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer" data-layer="backend">
+                    <div class="layer-title">Backend Layer</div>
+                    <div class="layer-techs">
+                        <span class="tech-node">Go</span>
+                        <span class="tech-node">Python</span>
+                        <span class="tech-node">gRPC</span>
+                        <span class="tech-node">REST</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer" data-layer="infra">
+                    <div class="layer-title">Infrastructure Layer</div>
+                    <div class="layer-techs">
+                        <span class="tech-node">Kubernetes</span>
+                        <span class="tech-node">Docker</span>
+                        <span class="tech-node">AWS</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer" data-layer="data">
+                    <div class="layer-title">Data Layer</div>
+                    <div class="layer-techs">
+                        <span class="tech-node">PostgreSQL</span>
+                        <span class="tech-node">DynamoDB</span>
+                        <span class="tech-node">Redis</span>
+                        <span class="tech-node">S3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    <section class="skills-container">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3 class="category-title">Languages</h3>
-                <ul class="skill-list">
-                    <li>Go</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>TypeScript</li>
-                    <li>Java</li>
-                </ul>
-            </div>
 
-            <div class="skill-category">
-                <h3 class="category-title">Backend & Cloud</h3>
-                <ul class="skill-list">
-                    <li>AWS (S3, ECS, DynamoDB)</li>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                    <li>gRPC</li>
-                    <li>REST APIs</li>
-                </ul>
-            </div>
+        <!-- Monitoring Dashboard -->
+        <div class="monitoring-section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i> Skill Metrics Dashboard
+            </h2>
+            <div class="metrics-grid">
+                <div class="metric-card" data-skill="go">
+                    <div class="metric-header">
+                        <span class="metric-name">Go</span>
+                        <span class="metric-status status-expert">Expert</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="stat-value">95%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Low</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="skill-category">
-                <h3 class="category-title">Systems & Infra</h3>
-                <ul class="skill-list">
-                    <li>Distributed Systems</li>
-                    <li>Concurrency</li>
-                    <li>Scalability</li>
-                    <li>Fault Tolerance</li>
-                    <li>Observability</li>
-                </ul>
-            </div>
+                <div class="metric-card" data-skill="python">
+                    <div class="metric-header">
+                        <span class="metric-name">Python</span>
+                        <span class="metric-status status-expert">Expert</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="stat-value">90%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">2</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Low</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="skill-category">
-                <h3 class="category-title">Databases</h3>
-                <ul class="skill-list">
-                    <li>PostgreSQL</li>
-                    <li>DynamoDB</li>
-                    <li>MongoDB</li>
-                    <li>MySQL</li>
-                </ul>
+                <div class="metric-card" data-skill="kubernetes">
+                    <div class="metric-header">
+                        <span class="metric-name">Kubernetes</span>
+                        <span class="metric-status status-proficient">Proficient</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="stat-value">85%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">2</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Medium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-skill="aws">
+                    <div class="metric-header">
+                        <span class="metric-name">AWS</span>
+                        <span class="metric-status status-expert">Expert</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 88%"></div>
+                            </div>
+                            <span class="stat-value">88%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">4</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Low</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-skill="docker">
+                    <div class="metric-header">
+                        <span class="metric-name">Docker</span>
+                        <span class="metric-status status-expert">Expert</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 92%"></div>
+                            </div>
+                            <span class="stat-value">92%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Low</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="metric-card" data-skill="nextjs">
+                    <div class="metric-header">
+                        <span class="metric-name">Next.js</span>
+                        <span class="metric-status status-proficient">Proficient</span>
+                    </div>
+                    <div class="metric-stats">
+                        <div class="stat">
+                            <span class="stat-label">Throughput</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 82%"></div>
+                            </div>
+                            <span class="stat-value">82%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">1</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value">Low</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+
+
+    </div>
+
+    <script src="script/skills.js"></script>
 </body>
 </html>
