@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Abhinav Inamdar - Skills</title>
+    <link rel="icon" href="docs/programming.png" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -83,6 +88,8 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             border: 1px solid #222222;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .skill-category:hover {
@@ -98,27 +105,27 @@
             border-bottom: 2px solid #333333;
         }
 
-        .tier-title {
-            color: #3498db;
-            font-weight: 700;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
         .skill-list {
             list-style: none;
             padding-left: 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
         .skill-list li {
             background-color: #222;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #e0e0e0;
+            border: 1px solid #333;
+            transition: background-color 0.2s ease;
+        }
+
+        .skill-list li:hover {
+            background-color: #333;
+            border-color: #3498db;
         }
 
     </style>
@@ -140,61 +147,45 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <h3 class="category-title">Languages</h3>
-                <h4 class="tier-title">Advanced</h4>
                 <ul class="skill-list">
-                    <li>Python</li>
                     <li>Go</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>C++</li>
                     <li>TypeScript</li>
-                    <li>JavaScript</li>
-                </ul>
-                <h4 class="tier-title">Proficient</h4>
-                <ul class="skill-list">
                     <li>Java</li>
-                    <li>C/C++</li>
-                    <li>SQL</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3 class="category-title">Frameworks</h3>
-                 <h4 class="tier-title">Advanced</h4>
+                <h3 class="category-title">Backend & Cloud</h3>
                 <ul class="skill-list">
-                    <li>Next.js</li>
-                </ul>
-                <h4 class="tier-title">Proficient</h4>
-                <ul class="skill-list">
-                    <li>React.js</li>
-                    <li>Flask</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="category-title">Cloud & DevOps</h3>
-                <h4 class="tier-title">Advanced</h4>
-                <ul class="skill-list">
-                    <li>AWS</li>
+                    <li>AWS (S3, ECS, DynamoDB)</li>
                     <li>Docker</li>
-                    <li>REST/gRPC APIs</li>
-                </ul>
-                <h4 class="tier-title">Proficient</h4>
-                <ul class="skill-list">
                     <li>Kubernetes</li>
-                    <li>GitHub</li>
+                    <li>gRPC</li>
+                    <li>REST APIs</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3 class="category-title">Databases & ML</h3>
-                 <h4 class="tier-title">Advanced</h4>
+                <h3 class="category-title">Systems & Infra</h3>
                 <ul class="skill-list">
-                    <li>TensorFlow</li>
-                    <li>NumPy/Pandas</li>
+                    <li>Distributed Systems</li>
+                    <li>Concurrency</li>
+                    <li>Scalability</li>
+                    <li>Fault Tolerance</li>
+                    <li>Observability</li>
                 </ul>
-                <h4 class="tier-title">Proficient</h4>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Databases</h3>
                 <ul class="skill-list">
-                    <li>Scikit-learn</li>
-                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>DynamoDB</li>
                     <li>MongoDB</li>
+                    <li>MySQL</li>
                 </ul>
             </div>
         </div>
